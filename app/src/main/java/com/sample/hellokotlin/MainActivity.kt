@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 //    var btnHello : Button
@@ -17,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         val btnKotlin = findViewById<Button>(R.id.btnKotlin)
         val btnVarJava = findViewById<Button>(R.id.btnVarJava)
         val btnVarKotlin = findViewById<Button>(R.id.btnVarKotlin)
+        val btnFlowControlJava = findViewById<Button>(R.id.btnFlowControlJava)
+        val btnFlowControlKotlin = findViewById<Button>(R.id.btnFlowControlKotlin)
 
         var intent : Intent
 
@@ -33,6 +34,12 @@ class MainActivity : AppCompatActivity() {
         }
         btnVarKotlin.setOnClickListener {
             startActivity(Intent(this@MainActivity, VariableKotlinActivity::class.java))
+        }
+        btnFlowControlJava.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FlowControlJavaActivity::class.java))
+        }
+        btnFlowControlKotlin.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FlowControlKotlinActivity::class.java))
         }
     }
 }
